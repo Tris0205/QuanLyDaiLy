@@ -119,6 +119,12 @@ namespace QuanLyDaiLy
             // cbDonViTinh
             // 
             this.cbDonViTinh.FormattingEnabled = true;
+            this.cbDonViTinh.Items.AddRange(new object[] {
+            "Hộp",
+            "Cây",
+            "Hộp thiếc",
+            "Hộp giấy",
+            "Bịch"});
             this.cbDonViTinh.Location = new System.Drawing.Point(120, 171);
             this.cbDonViTinh.Name = "cbDonViTinh";
             this.cbDonViTinh.Size = new System.Drawing.Size(173, 24);
@@ -273,7 +279,7 @@ namespace QuanLyDaiLy
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(357, 136);
+            this.label11.Location = new System.Drawing.Point(345, 139);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(78, 18);
             this.label11.TabIndex = 10;
@@ -283,7 +289,7 @@ namespace QuanLyDaiLy
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(349, 171);
+            this.label10.Location = new System.Drawing.Point(337, 171);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(86, 18);
             this.label10.TabIndex = 9;
@@ -293,7 +299,7 @@ namespace QuanLyDaiLy
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(317, 101);
+            this.label9.Location = new System.Drawing.Point(305, 102);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(118, 18);
             this.label9.TabIndex = 8;
@@ -313,7 +319,7 @@ namespace QuanLyDaiLy
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(349, 63);
+            this.label7.Location = new System.Drawing.Point(337, 63);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(86, 18);
             this.label7.TabIndex = 6;
@@ -323,7 +329,7 @@ namespace QuanLyDaiLy
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(369, 29);
+            this.label6.Location = new System.Drawing.Point(357, 27);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(66, 18);
             this.label6.TabIndex = 5;

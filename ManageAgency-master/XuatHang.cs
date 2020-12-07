@@ -85,6 +85,12 @@ namespace QuanLyDaiLy
         {
             string xuathangID = txtMaXuatHang.Text;
             PHIEUXUATHANG xuathang  = db.PHIEUXUATHANGs.Where(p => p.MaXuatHang == xuathangID).SingleOrDefault();
+
+            if (xuathang != null)
+            {
+                MessageBox.Show("Mã phiếu xuất hàng đã tồn tại");
+                return;
+            }
             if (xuathang == null)
             {
                 PHIEUXUATHANG p = new PHIEUXUATHANG()
@@ -119,7 +125,7 @@ namespace QuanLyDaiLy
                 db.PHIEUXUATHANGs.Remove(xuathang);
                 db.SaveChanges();
                 LoadDataPhieuXuatHang();
-                MessageBox.Show("Delete product successully");
+                MessageBox.Show("Xoá phiếu xuất hàng thành công");
 
             }
         }
@@ -128,6 +134,11 @@ namespace QuanLyDaiLy
         {
             string xuathangID = txtMaXuatHang.Text;
             PHIEUXUATHANG xuathang = db.PHIEUXUATHANGs.Where(p => p.MaXuatHang == xuathangID).SingleOrDefault();
+            if (xuathang == null)
+            {
+                MessageBox.Show("Mã phiếu xuất hàng không tồn tại");
+                return;
+            }
             if (xuathang != null)
             {
 
@@ -171,7 +182,6 @@ namespace QuanLyDaiLy
                           soTienTra = p.SoTienTra
                       };
             ControlPhieuXuatHang_DataSource(res.ToList());
-            MessageBox.Show("Found " + res.Count().ToString() + " result !");
         }
 
         private void btnKhoiTao_Click(object sender, EventArgs e)

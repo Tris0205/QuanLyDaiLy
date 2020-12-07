@@ -80,9 +80,9 @@ namespace QuanLyDaiLy
             this.btn_Login.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btn_Login.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Login.Image = ((System.Drawing.Image)(resources.GetObject("btn_Login.Image")));
-            this.btn_Login.Location = new System.Drawing.Point(340, 318);
+            this.btn_Login.Location = new System.Drawing.Point(112, 318);
             this.btn_Login.Name = "btn_Login";
-            this.btn_Login.Size = new System.Drawing.Size(207, 107);
+            this.btn_Login.Size = new System.Drawing.Size(254, 117);
             this.btn_Login.TabIndex = 4;
             this.btn_Login.Text = "ĐĂNG NHẬP";
             this.btn_Login.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -95,9 +95,9 @@ namespace QuanLyDaiLy
             this.btn_Exit.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btn_Exit.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Exit.Image = ((System.Drawing.Image)(resources.GetObject("btn_Exit.Image")));
-            this.btn_Exit.Location = new System.Drawing.Point(569, 318);
+            this.btn_Exit.Location = new System.Drawing.Point(399, 318);
             this.btn_Exit.Name = "btn_Exit";
-            this.btn_Exit.Size = new System.Drawing.Size(207, 107);
+            this.btn_Exit.Size = new System.Drawing.Size(254, 117);
             this.btn_Exit.TabIndex = 5;
             this.btn_Exit.Text = "THOÁT";
             this.btn_Exit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -107,11 +107,11 @@ namespace QuanLyDaiLy
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(66, 28);
+            this.label3.Location = new System.Drawing.Point(12, 36);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(735, 69);
+            this.label3.Size = new System.Drawing.Size(594, 55);
             this.label3.TabIndex = 6;
             this.label3.Text = "ĐĂNG NHẬP HỆ THỐNG";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -121,7 +121,7 @@ namespace QuanLyDaiLy
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(953, 524);
+            this.ClientSize = new System.Drawing.Size(688, 487);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);

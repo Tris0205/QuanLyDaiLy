@@ -72,6 +72,12 @@ namespace QuanLyDaiLy
         {
             string mathangID = txtMatHang.Text;
             MATHANG mathang = db.MATHANGs.Where(p => p.MaHang == mathangID).SingleOrDefault();
+
+            if (mathang != null)
+            {
+                MessageBox.Show("Mã mặt hàng đã tồn tại");
+                return;
+            }
             if (mathang == null)
             {
                 MATHANG p = new MATHANG()
@@ -87,7 +93,7 @@ namespace QuanLyDaiLy
                 db.MATHANGs.Add(p);
                 db.SaveChanges();
                 LoadDataMatHang();
-                MessageBox.Show("Thêm đại lý thành công");
+                MessageBox.Show("Thêm mặt hàng thành công");
             }
         }
 
@@ -101,7 +107,7 @@ namespace QuanLyDaiLy
                 db.MATHANGs.Remove(mathang);
                 db.SaveChanges();
                 LoadDataMatHang();
-                MessageBox.Show("Delete product successully");
+                MessageBox.Show("Xoá mặt hàng thành công");
 
             }
         }
@@ -110,6 +116,11 @@ namespace QuanLyDaiLy
         {
             string mathangID = txtMatHang.Text;
             MATHANG mathang = db.MATHANGs.Where(p => p.MaHang == mathangID).SingleOrDefault();
+            if (mathang == null)
+            {
+                MessageBox.Show("Mã mặt hàng không tồn tại");
+                return;
+            }
             if (mathang != null)
             {
 
@@ -128,7 +139,7 @@ namespace QuanLyDaiLy
 
                 db.SaveChanges();
                 LoadDataMatHang();
-                MessageBox.Show("Update product successully");
+                MessageBox.Show("Cập nhật mặt hàng thành công");
 
             }
         }
@@ -149,7 +160,6 @@ namespace QuanLyDaiLy
                           donGia = p.DonGia,
                       };
             ControlMatHang_DataSource(res.ToList());
-            MessageBox.Show("Found " + res.Count().ToString() + " result !");
         }
 
         private void btnKhoiTao_Click(object sender, EventArgs e)

@@ -45,17 +45,17 @@ namespace QuanLyDaiLy
 
                        };
             ControlThuTien_DataSource(data.ToList());
-            DaiLy_DataBinding();
+            ThuTien_DataBinding();
 
         }
 
-        private void DaiLy_DataBinding()
+        private void ThuTien_DataBinding()
         {
             txtMaThuTien.DataBindings.Clear();
             txtNgayThuTien.DataBindings.Clear();
             txtSoTienThu.DataBindings.Clear();
             txtTienConLai.DataBindings.Clear();
-;
+
 
             txtMaThuTien.DataBindings.Add(new Binding("Text", thuTienDgv.DataSource, "maThuTien"));
             txtNgayThuTien.DataBindings.Add(new Binding("Text", thuTienDgv.DataSource, "ngayThuTien"));
@@ -68,6 +68,11 @@ namespace QuanLyDaiLy
         {
             string thutienID = txtMaThuTien.Text;
             PHIEUTHUTIEN thutien = db.PHIEUTHUTIENs.Where(p => p.MaThuTien == thutienID).SingleOrDefault();
+            if (thutien != null)
+            {
+                MessageBox.Show("Mã thu tiền đã tồn tại");
+                return;
+            }
             if (thutien == null)
             {
                 PHIEUTHUTIEN p = new PHIEUTHUTIEN()
@@ -103,6 +108,11 @@ namespace QuanLyDaiLy
         {
             string thutienID = txtMaThuTien.Text;
             PHIEUTHUTIEN thutien = db.PHIEUTHUTIENs.Where(p => p.MaThuTien == thutienID).SingleOrDefault();
+            if (thutien == null)
+            {
+                MessageBox.Show("Mã thu tiền không tồn tại");
+                return;
+            }
             if (thutien != null)
             {
 
@@ -130,7 +140,6 @@ namespace QuanLyDaiLy
                           tienConLai = p.TienConLai
                       };
             ControlThuTien_DataSource(res.ToList());
-            MessageBox.Show("Found " + res.Count().ToString() + " result !");
         }
 
         private void btnKhoiTao_Click(object sender, EventArgs e)
@@ -144,7 +153,7 @@ namespace QuanLyDaiLy
                            tienConLai = p.TienConLai
                        };
             ControlThuTien_DataSource(data.ToList());
-            DaiLy_DataBinding();
+            ThuTien_DataBinding();
         }
     }
 }

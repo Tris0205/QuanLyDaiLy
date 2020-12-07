@@ -60,14 +60,34 @@ namespace QuanLyDaiLy
             this.Hide();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+    
 
         private void button2_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("https://www.facebook.com/profile.php?id=100012907031919");
+        }
+
+        private void btn_Close_Click(object sender, EventArgs e)
+        {
+            DialogResult dialog = MessageBox.Show("Bạn chắc chắn muốn thoát chương trình?", "THÔNG BÁO"
+                , MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dialog == DialogResult.Yes)
+                Application.Exit();
+            else { }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            BaoCao i = new BaoCao();
+            i.Show();
+            this.Hide();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            QuyDinh g = new QuyDinh();
+            g.Show();
+            this.Hide();
         }
     }
 }

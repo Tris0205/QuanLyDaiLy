@@ -14,6 +14,9 @@ namespace QuanLyDaiLy
     public partial class DaiLy : Form
     {
         QLDaiLyEntities3 db = new QLDaiLyEntities3();
+
+        public string MaDaiLy { get; private set; }
+
         public DaiLy()
         {
             InitializeComponent();
@@ -72,9 +75,43 @@ namespace QuanLyDaiLy
 
         private void ThemDaiLy_Click(object sender, EventArgs e)
         {
+            //string dailyID = txtMaDaiLy.Text;
+            //DAILY daily = db.DAILies.Where(p => p.MaDaiLy == dailyID).SingleOrDefault();
+            //if (daily != null)
+            //{
+            //    MessageBox.Show("Mã đại lý đã tồn tại");
+            //    return;
+            //}
+            //else if (String.IsNullOrEmpty(MaDaiLy))
+            //{
+            //    MessageBox.Show("Mã đại lý không được để trống");
+            //    return;
+            //}
+            //else
+            //{
+            //    daily = new DAILY();
+            //    daily.MaDaiLy = txtMaDaiLy.Text;
+            //    daily.MaLoaiDaiLy = int.Parse(cbLoai.Text);
+            //    daily.DiaChi = txtDiaChi.Text;
+            //    daily.Quan = cbQuan.Text;
+            //    daily.SDT = txtSoDienThoai.Text;
+            //    daily.NgayTiepNhan = DateTime.Parse(txtNgayTiepNhan.Text);
+            //    db.DAILies.Add(daily);
+            //    db.SaveChanges();
+            //    LoadDataDaiLy();
+            //    MessageBox.Show("Thêm đại lý thành công");
+            //}
             string dailyID = txtMaDaiLy.Text;
             DAILY daily = db.DAILies.Where(p => p.MaDaiLy == dailyID).SingleOrDefault();
+            if(daily != null)
+            {
+                MessageBox.Show("Mã đại lý đã tồn tại");
+                return;
+            }
+
+           
             if (daily == null)
+
             {
                 DAILY p = new DAILY()
                 {
@@ -93,6 +130,7 @@ namespace QuanLyDaiLy
                 MessageBox.Show("Thêm đại lý thành công");
             }
         }
+        
 
         private void XoaDaiLy_Click(object sender, EventArgs e)
         {
@@ -104,7 +142,7 @@ namespace QuanLyDaiLy
                 db.DAILies.Remove(daily);
                 db.SaveChanges();
                 LoadDataDaiLy();
-                MessageBox.Show("Delete product successully");
+                MessageBox.Show("Xoá đại lý thành công");
 
             }
         }
@@ -113,7 +151,13 @@ namespace QuanLyDaiLy
         {
             string dailyID = txtMaDaiLy.Text;
             DAILY daily = db.DAILies.Where(p => p.MaDaiLy == dailyID).SingleOrDefault();
-            if (daily != null)
+            if (daily == null)
+            {
+                MessageBox.Show("Mã đại lý không tồn tại");
+                return;
+            }
+
+            else
             {
 
                 daily.MaDaiLy = dailyID;
@@ -123,15 +167,10 @@ namespace QuanLyDaiLy
                 daily.DiaChi = txtDiaChi.Text;
                 daily.Quan = cbQuan.Text;
                 daily.NgayTiepNhan = DateTime.Parse(txtNgayTiepNhan.Text);
-                //product.Product_CategoryID = categoryID;
-                //product.Product_Name = cbProductName.SelectedValue.ToString();
-                //product.Product_Price = int.Parse(txtPrice.Text);
-                //product.Product_Status = cxActiveProduct.Checked;
-
 
                 db.SaveChanges();
                 LoadDataDaiLy();
-                MessageBox.Show("Update product successully");
+                MessageBox.Show("Cập nhật đại lý thành công");
 
             }
         }
@@ -154,7 +193,6 @@ namespace QuanLyDaiLy
                               ngayTiepNhan = p.NgayTiepNhan
                           };
                 ControlDaiLy_DataSource(res.ToList());
-                MessageBox.Show("Found " + res.Count().ToString() + " result !");
 
             
         }
@@ -166,6 +204,7 @@ namespace QuanLyDaiLy
                        {
                            maDaiLy = p.MaDaiLy,
                            tenDaiLy = p.TenDaiLy,
+
                            maLoaiDaiLy = p.MaLoaiDaiLy,
                            sdt = p.SDT,
                            diaChi = p.DiaChi,

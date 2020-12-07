@@ -53,12 +53,12 @@ namespace QuanLyDaiLy
         private void DaiLy_DataBinding()
         {
             txtMaThuTien.DataBindings.Clear();
-            txtMaDaiLy.DataBindings.Clear();
+            cbDaiLy.DataBindings.Clear();
             txtSoTienThu.DataBindings.Clear();
             txtTienConLai.DataBindings.Clear();
             txtMaPhieu.DataBindings.Clear();
 
-            txtMaDaiLy.DataBindings.Add(new Binding("Text", tienNoDgv.DataSource, "maDaiLy"));
+            cbDaiLy.DataBindings.Add(new Binding("Text", tienNoDgv.DataSource, "maDaiLy"));
             txtMaThuTien.DataBindings.Add(new Binding("Text", tienNoDgv.DataSource, "maThuTien"));
             txtMaPhieu.DataBindings.Add(new Binding("Text", tienNoDgv.DataSource, "maPhieu"));
             txtSoTienThu.DataBindings.Add(new Binding("Text", tienNoDgv.DataSource, "soTienThu"));
@@ -70,13 +70,18 @@ namespace QuanLyDaiLy
         {
             string tiennoID = txtMaPhieu.Text;
             PHIEUTHUTIENNO tienno = db.PHIEUTHUTIENNOes.Where(p => p.MaPhieu == tiennoID).SingleOrDefault();
+            if (tienno != null)
+            {
+                MessageBox.Show("Mã thu nợ đã tồn tại");
+                return;
+            }
             if (tienno == null)
             {
                 PHIEUTHUTIENNO p = new PHIEUTHUTIENNO()
                 {
 
                     MaPhieu = tiennoID,
-                    MaDaiLy = txtMaDaiLy.Text,
+                    MaDaiLy = cbDaiLy.Text,
                     MaThuTien = txtMaThuTien.Text,
                     SoTienThu = int.Parse(txtSoTienThu.Text),
                     TienConLai = int.Parse(txtTienConLai.Text),
@@ -108,11 +113,16 @@ namespace QuanLyDaiLy
         {
             string tiennoID = txtMaPhieu.Text;
             PHIEUTHUTIENNO tienno = db.PHIEUTHUTIENNOes.Where(p => p.MaPhieu == tiennoID).SingleOrDefault();
+            if (tienno == null)
+            {
+                MessageBox.Show("Mã thu tiền nợ tồn tại");
+                return;
+            }
             if (tienno != null)
             {
 
                 tienno.MaPhieu = tiennoID;
-                tienno.MaDaiLy = txtMaDaiLy.Text;
+                tienno.MaDaiLy = cbDaiLy.Text;
                 tienno.MaThuTien = txtMaThuTien.Text;
                 tienno.SoTienThu = int.Parse(txtSoTienThu.Text);
                 tienno.TienConLai = int.Parse(txtTienConLai.Text);

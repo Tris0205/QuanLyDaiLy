@@ -31,6 +31,8 @@ namespace QuanLyDaiLy
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DaiLy));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbQuan = new System.Windows.Forms.ComboBox();
+            this.cbLoai = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.DaiLyDatagridview = new System.Windows.Forms.DataGridView();
             this.TraCuuDaiLy = new System.Windows.Forms.Button();
@@ -51,8 +53,6 @@ namespace QuanLyDaiLy
             this.label1 = new System.Windows.Forms.Label();
             this.btn_Close = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.cbLoai = new System.Windows.Forms.ComboBox();
-            this.cbQuan = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DaiLyDatagridview)).BeginInit();
@@ -87,6 +87,46 @@ namespace QuanLyDaiLy
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin đại lý";
+            // 
+            // cbQuan
+            // 
+            this.cbQuan.FormattingEnabled = true;
+            this.cbQuan.Items.AddRange(new object[] {
+            "Q1",
+            "Q2",
+            "Q3",
+            "Q4",
+            "Q5",
+            "Q6",
+            "Q7",
+            "Q8",
+            "Q9",
+            "Q10",
+            "Q11",
+            "Q12",
+            "Tan Binh",
+            "Tan Phu",
+            "Binh Tan",
+            "Binh Thanh",
+            "Phu Nhuan",
+            "Thu Duc",
+            "Hoc Mon",
+            "Cu Chi"});
+            this.cbQuan.Location = new System.Drawing.Point(472, 53);
+            this.cbQuan.Name = "cbQuan";
+            this.cbQuan.Size = new System.Drawing.Size(121, 24);
+            this.cbQuan.TabIndex = 21;
+            // 
+            // cbLoai
+            // 
+            this.cbLoai.FormattingEnabled = true;
+            this.cbLoai.Items.AddRange(new object[] {
+            "1",
+            "2"});
+            this.cbLoai.Location = new System.Drawing.Point(115, 91);
+            this.cbLoai.Name = "cbLoai";
+            this.cbLoai.Size = new System.Drawing.Size(121, 24);
+            this.cbLoai.TabIndex = 20;
             // 
             // groupBox2
             // 
@@ -201,63 +241,70 @@ namespace QuanLyDaiLy
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(358, 91);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(348, 91);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(104, 17);
+            this.label7.Size = new System.Drawing.Size(118, 17);
             this.label7.TabIndex = 6;
             this.label7.Text = "Ngày tiếp nhận";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(358, 22);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(348, 21);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(51, 17);
+            this.label6.Size = new System.Drawing.Size(58, 17);
             this.label6.TabIndex = 5;
             this.label6.Text = "Địa chỉ";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(358, 57);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(348, 56);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(43, 17);
+            this.label5.Size = new System.Drawing.Size(47, 17);
             this.label5.TabIndex = 4;
             this.label5.Text = "Quận";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(6, 131);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(36, 17);
+            this.label4.Size = new System.Drawing.Size(39, 17);
             this.label4.TabIndex = 3;
             this.label4.Text = "SĐT";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(7, 57);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 17);
+            this.label3.Size = new System.Drawing.Size(80, 17);
             this.label3.TabIndex = 2;
             this.label3.Text = "Tên đại lý";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(7, 91);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 17);
+            this.label2.Size = new System.Drawing.Size(83, 17);
             this.label2.TabIndex = 1;
             this.label2.Text = "Loại đại lý";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(7, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 17);
+            this.label1.Size = new System.Drawing.Size(73, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã đại lý";
             // 
@@ -286,46 +333,6 @@ namespace QuanLyDaiLy
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // cbLoai
-            // 
-            this.cbLoai.FormattingEnabled = true;
-            this.cbLoai.Items.AddRange(new object[] {
-            "1",
-            "2"});
-            this.cbLoai.Location = new System.Drawing.Point(115, 91);
-            this.cbLoai.Name = "cbLoai";
-            this.cbLoai.Size = new System.Drawing.Size(121, 24);
-            this.cbLoai.TabIndex = 20;
-            // 
-            // cbQuan
-            // 
-            this.cbQuan.FormattingEnabled = true;
-            this.cbQuan.Items.AddRange(new object[] {
-            "Q1",
-            "Q2",
-            "Q3",
-            "Q4",
-            "Q5",
-            "Q6",
-            "Q7",
-            "Q8",
-            "Q9",
-            "Q10",
-            "Q11",
-            "Q12",
-            "Tan Binh",
-            "Tan Phu",
-            "Binh Tan",
-            "Binh Thanh",
-            "Phu Nhuan",
-            "Thu Duc",
-            "Hoc Mon",
-            "Cu Chi"});
-            this.cbQuan.Location = new System.Drawing.Point(472, 53);
-            this.cbQuan.Name = "cbQuan";
-            this.cbQuan.Size = new System.Drawing.Size(121, 24);
-            this.cbQuan.TabIndex = 21;
             // 
             // DaiLy
             // 
