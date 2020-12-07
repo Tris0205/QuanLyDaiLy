@@ -62,6 +62,18 @@
     <Compile Include="BaoCao.Designer.cs">
       <DependentUpon>BaoCao.cs</DependentUpon>
     </Compile>
+    <Compile Include="BaoCaoDS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCaoDS.Designer.cs">
+      <DependentUpon>BaoCaoDS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="br.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.Designer.cs">
+      <DependentUpon>br.cs</DependentUpon>
+    </Compile>
     <Compile Include="DaiLy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +183,12 @@
     </Compile>
     <EmbeddedResource Include="BaoCao.resx">
       <DependentUpon>BaoCao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCaoDS.resx">
+      <DependentUpon>BaoCaoDS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="br.resx">
+      <DependentUpon>br.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DaiLy.resx">
       <DependentUpon>DaiLy.cs</DependentUpon>

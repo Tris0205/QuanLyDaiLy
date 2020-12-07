@@ -52,7 +52,7 @@ namespace QuanLyDaiLy
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_Close = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnKhoiTao = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DaiLyDatagridview)).BeginInit();
@@ -321,25 +321,25 @@ namespace QuanLyDaiLy
             this.btn_Close.UseVisualStyleBackColor = true;
             this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
             // 
-            // button5
+            // btnKhoiTao
             // 
-            this.button5.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(671, 546);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(211, 50);
-            this.button5.TabIndex = 20;
-            this.button5.Text = "   KHỞI TẠO";
-            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.btnKhoiTao.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKhoiTao.Image = ((System.Drawing.Image)(resources.GetObject("btnKhoiTao.Image")));
+            this.btnKhoiTao.Location = new System.Drawing.Point(671, 546);
+            this.btnKhoiTao.Name = "btnKhoiTao";
+            this.btnKhoiTao.Size = new System.Drawing.Size(211, 50);
+            this.btnKhoiTao.TabIndex = 20;
+            this.btnKhoiTao.Text = "   KHỞI TẠO";
+            this.btnKhoiTao.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnKhoiTao.UseVisualStyleBackColor = true;
+            this.btnKhoiTao.Click += new System.EventHandler(this.button5_Click);
             // 
             // DaiLy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1111, 608);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.btnKhoiTao);
             this.Controls.Add(this.btn_Close);
             this.Controls.Add(this.groupBox1);
             this.Name = "DaiLy";
@@ -373,7 +373,7 @@ namespace QuanLyDaiLy
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView DaiLyDatagridview;
         private System.Windows.Forms.Button btn_Close;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnKhoiTao;
         private System.Windows.Forms.ComboBox cbQuan;
         private System.Windows.Forms.ComboBox cbLoai;
     }

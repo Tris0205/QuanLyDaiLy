@@ -39,8 +39,8 @@ namespace QuanLyDaiLy
             this.panel1 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.btn_Close = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnBaoCao = new System.Windows.Forms.Button();
+            this.btnQuyDinh = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -173,35 +173,35 @@ namespace QuanLyDaiLy
             this.btn_Close.UseVisualStyleBackColor = false;
             this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
             // 
-            // button3
+            // btnBaoCao
             // 
-            this.button3.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(779, 345);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(253, 131);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "    BÁO CÁO";
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnBaoCao.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnBaoCao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBaoCao.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBaoCao.Image = ((System.Drawing.Image)(resources.GetObject("btnBaoCao.Image")));
+            this.btnBaoCao.Location = new System.Drawing.Point(779, 345);
+            this.btnBaoCao.Name = "btnBaoCao";
+            this.btnBaoCao.Size = new System.Drawing.Size(253, 131);
+            this.btnBaoCao.TabIndex = 7;
+            this.btnBaoCao.Text = "    BÁO CÁO";
+            this.btnBaoCao.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBaoCao.UseVisualStyleBackColor = false;
+            this.btnBaoCao.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button4
+            // btnQuyDinh
             // 
-            this.button4.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(779, 507);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(253, 131);
-            this.button4.TabIndex = 8;
-            this.button4.Text = "    QUY ĐỊNH";
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnQuyDinh.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnQuyDinh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQuyDinh.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuyDinh.Image = ((System.Drawing.Image)(resources.GetObject("btnQuyDinh.Image")));
+            this.btnQuyDinh.Location = new System.Drawing.Point(779, 507);
+            this.btnQuyDinh.Name = "btnQuyDinh";
+            this.btnQuyDinh.Size = new System.Drawing.Size(253, 131);
+            this.btnQuyDinh.TabIndex = 8;
+            this.btnQuyDinh.Text = "    QUY ĐỊNH";
+            this.btnQuyDinh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnQuyDinh.UseVisualStyleBackColor = false;
+            this.btnQuyDinh.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -221,8 +221,8 @@ namespace QuanLyDaiLy
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1182, 673);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnQuyDinh);
+            this.Controls.Add(this.btnBaoCao);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btn_Logout);
             this.Controls.Add(this.btn_Debt);
@@ -248,8 +248,8 @@ namespace QuanLyDaiLy
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btn_Close;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnBaoCao;
+        private System.Windows.Forms.Button btnQuyDinh;
         private System.Windows.Forms.Button button5;
     }
 }

@@ -78,7 +78,7 @@ namespace QuanLyDaiLy
 
         private void button3_Click(object sender, EventArgs e)
         {
-            BaoCao i = new BaoCao();
+            br i = new br();
             i.Show();
             this.Hide();
         }
