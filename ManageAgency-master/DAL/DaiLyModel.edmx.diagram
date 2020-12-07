@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6ffe55f68d6c4c2cab67edbbf4990e76" Name="Diagram1">
+        <EntityTypeShape EntityType="QLDaiLyModel.BAOCAOCONGNODAILY" Width="1.5" PointX="8.25" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDaiLyModel.BAOCAODOANHSO" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDaiLyModel.CTBAOCAOCONGNODAILY" Width="1.5" PointX="10.5" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDaiLyModel.CTBAOCAODOANHSO" Width="1.5" PointX="3" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDaiLyModel.CTPHIEUTHUTIEN" Width="1.5" PointX="7.5" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDaiLyModel.CTPHIEUXUATHANG" Width="1.5" PointX="5.25" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDaiLyModel.DAILY" Width="1.5" PointX="6" PointY="13.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDaiLyModel.LOAIDAILY" Width="1.5" PointX="3.75" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDaiLyModel.LOAIMATHANG" Width="1.5" PointX="0.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDaiLyModel.MATHANG" Width="1.5" PointX="3" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDaiLyModel.PHIEUTHUTIEN" Width="1.5" PointX="5.25" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDaiLyModel.PHIEUTHUTIENNO" Width="1.5" PointX="11.25" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDaiLyModel.PHIEUXUATHANG" Width="1.5" PointX="8.25" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDaiLyModel.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="QLDaiLyModel.FK_CTBAOCAOCONGNODAILY_BAOCAOCONGNODAILY" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDaiLyModel.FK_CTBAOCAODOANHSO_BAOCAODOANHSO" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDaiLyModel.FK_CTBAOCAOCONGNODAILY_CTPHIEUXUATHANG" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDaiLyModel.FK_CTBAOCAODOANHSO_LOAIMATHANG" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDaiLyModel.FK_CTPHIEUTHUTIEN_CTPHIEUXUATHANG" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDaiLyModel.FK_CTPHIEUTHUTIEN_PHIEUTHUTIEN" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDaiLyModel.FK_CTPHIEUXUATHANG_MATHANG" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDaiLyModel.FK_CTPHIEUXUATHANG_PHIEUXUATHANG" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDaiLyModel.FK_DAILY_LOAIDAILY" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDaiLyModel.FK_PHIEUTHUTIENNO_DAILY" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDaiLyModel.FK_PHIEUXUATHANG_DAILY" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDaiLyModel.FK_MATHANG_LOAIMATHANG" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDaiLyModel.FK_PHIEUXUATHANG_MATHANG" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDaiLyModel.FK_PHIEUTHUTIENNO_PHIEUTHUTIEN" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

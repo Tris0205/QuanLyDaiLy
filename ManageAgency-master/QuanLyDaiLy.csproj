@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1C887A8E-DEE2-47D8-8E5F-AB0B1BA99B68}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QuanLyDaiLy</RootNamespace>
+    <AssemblyName>QuanLyDaiLy</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DaiLy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DaiLy.Designer.cs">
+      <DependentUpon>DaiLy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\BAOCAOCONGNODAILY.cs">
+      <DependentUpon>DaiLyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\BAOCAODOANHSO.cs">
+      <DependentUpon>DaiLyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\CTBAOCAOCONGNODAILY.cs">
+      <DependentUpon>DaiLyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\CTBAOCAODOANHSO.cs">
+      <DependentUpon>DaiLyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\CTPHIEUTHUTIEN.cs">
+      <DependentUpon>DaiLyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\CTPHIEUXUATHANG.cs">
+      <DependentUpon>DaiLyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DAILY.cs">
+      <DependentUpon>DaiLyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DaiLyModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DaiLyModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DaiLyModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DaiLyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DaiLyModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DaiLyModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\LOAIDAILY.cs">
+      <DependentUpon>DaiLyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\LOAIMATHANG.cs">
+      <DependentUpon>DaiLyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\MATHANG.cs">
+      <DependentUpon>DaiLyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\PHIEUTHUTIEN.cs">
+      <DependentUpon>DaiLyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\PHIEUTHUTIENNO.cs">
+      <DependentUpon>DaiLyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\PHIEUXUATHANG.cs">
+      <DependentUpon>DaiLyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\sysdiagram.cs">
+      <DependentUpon>DaiLyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MatHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MatHang.Designer.cs">
+      <DependentUpon>MatHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThuNo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThuNo.Designer.cs">
+      <DependentUpon>ThuNo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThuTien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThuTien.Designer.cs">
+      <DependentUpon>ThuTien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XuatHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XuatHang.Designer.cs">
+      <DependentUpon>XuatHang.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DaiLy.resx">
+      <DependentUpon>DaiLy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MatHang.resx">
+      <DependentUpon>MatHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ThuNo.resx">
+      <DependentUpon>ThuNo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThuTien.resx">
+      <DependentUpon>ThuTien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XuatHang.resx">
+      <DependentUpon>XuatHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="DAL\DaiLyModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DaiLyModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DAL\DaiLyModel.edmx.diagram">
+      <DependentUpon>DaiLyModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DAL\DaiLyModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DaiLyModel.edmx</DependentUpon>
+      <LastGenOutput>DaiLyModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DAL\DaiLyModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DaiLyModel.edmx</DependentUpon>
+      <LastGenOutput>DaiLyModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
